@@ -1,17 +1,18 @@
+// app/+not-found.tsx
 import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { Text, View } from '@/components/Themed';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function NotFoundScreen() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>This screen doesn't exist.</Text>
+      {/* Esto cambia el título en la cabecera de la pantalla de error */}
+      <Stack.Screen options={{ title: '¡Oops!' }} />
 
-        <Link href="/" style={styles.link}>
-          <Text style={styles.linkText}>Go to home screen!</Text>
+      <View style={styles.container}>
+        <Text style={styles.title}>Esta pantalla no existe.</Text>
+
+        <Link href="./" style={styles.link}>
+          <Text style={styles.linkText}>¡Volver a la pantalla principal!</Text>
         </Link>
       </View>
     </>
